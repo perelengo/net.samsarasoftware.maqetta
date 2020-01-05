@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="SamsaraSoftware Systems - Maqetta.org plugins Repository" url="http://www.samsarasoftwaresystems.com/maqetta/repository">
+      SamsaraSoftware Systems - Maqetta.org plugins Repository
+   </description>
+   <feature url="features/net.samsarasoftware.maqetta.feature_0.2.0.qualifier.jar" id="net.samsarasoftware.maqetta.feature" version="0.2.0.qualifier"/>
+</site>

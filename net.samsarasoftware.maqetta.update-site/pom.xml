@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>net.samsarasoftware</groupId>
+		<artifactId>net.samsarasoftware.maqetta</artifactId>
+		<version>0.2.0-SNAPSHOT</version>
+	</parent>
+	<groupId>net.samsarasoftware.maqetta</groupId>
+	<artifactId>net.samsarasoftware.maqetta.update-site</artifactId>
+	<version>0.2.0-SNAPSHOT</version>
+	<packaging>eclipse-repository</packaging>
+
+	<dependencies>
+		<dependency>
+			<groupId>net.samsarasoftware.maqetta</groupId>
+			<artifactId>net.samsarasoftware.maqetta.feature</artifactId>
+			<version>0.2.0-SNAPSHOT</version>
+			<type>eclipse-feature</type>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>3.0.0</version>
+				<executions>
+					<execution>
+						<id>parse-version</id>
+						<phase>pre-clean</phase>
+						<goals>
+							<goal>parse-version</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.0.2</version>
+				<executions>
+					<execution>
+						<id>resources</id>
+						<phase>pre-clean</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>src/main/resources</outputDirectory>
+							<outputDirectory>${basedir}</outputDirectory>
+							<resources>
+								<resource>
+									<directory>src/main/filtered-resources</directory>
+									<filtering>true</filtering>
+								</resource>
+
+							</resources>
+						</configuration>
+					</execution>
+				
+					<execution>
+						<id>copy licenses</id>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<phase>generate-resources</phase>
+						<configuration>
+							<resources>
+								<resource>
+									<directory>${env.SAMSARASOFTWARE_WORKSPACE_DIR}/net.samsarasoftware/src/license/</directory>
+									<include>THIRD-PARTY.properties</include>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+							<outputDirectory>src/license</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>		
+			
+			<!-- <plugin> <artifactId>maven-clean-plugin</artifactId> <version>3.0.0</version> 
+				<configuration> <filesets> <fileset> <directory>features</directory> <directory>plugins</directory> 
+				</fileset> </filesets> </configuration> </plugin> <plugin> <groupId>org.apache.maven.plugins</groupId> 
+				<artifactId>maven-dependency-plugin</artifactId> <version>3.0.0</version> 
+				<executions> <execution> <id>copy-features</id> <phase>clean</phase> <goals> 
+				<goal>copy-dependencies</goal> </goals> <configuration> <includeTypes>eclipse-feature</includeTypes> 
+				<outputDirectory>features</outputDirectory> </configuration> </execution> 
+				<execution> <id>copy-plugin</id> <phase>clean</phase> <goals> <goal>copy-dependencies</goal> 
+				</goals> <configuration> <includeTypes>eclipse-plugin</includeTypes> <outputDirectory>plugins</outputDirectory> 
+				</configuration> </execution> </executions> </plugin> -->
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-p2-director-plugin</artifactId>
+				<version>1.0.0</version>
+				<executions>
+					<execution>
+						<id>create-product-distributions</id>
+						<goals>
+							<goal>materialize-products</goal>
+							<goal>archive-products</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-p2-repository-plugin</artifactId>
+				<version>1.0.0</version>
+				<configuration>
+					<includeAllDependencies>true</includeAllDependencies>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

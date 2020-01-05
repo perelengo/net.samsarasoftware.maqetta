@@ -1,0 +1,83 @@
+{
+    "collections": {
+        "dijit": {
+            "name": "Dijit"
+        }
+    },
+    "categories": {
+        "controls": {
+            "name": "Dojo Controls",
+            "description": "Dojo Controls",
+            "widgetClass": "dijit"
+        }
+	},
+    "widgets": [
+        {
+            "name": "RichFilteringSelect",
+            "description": "Select (Filtering)",
+            "type": "samsarasoftware/form/RichFilteringSelect",
+            "category": "controls",
+            "collection": "dijit",
+            "tags": "RichFilteringSelect",
+            "icon": "resources/images/filtering-select.png",
+            "iconBase64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAVJJREFUeNpi/P//PwMlgAVEhPcf+E+RAb++fWeoz3QlqLhxxh6G+gwXBH/6bgYmEOPHp69gAVGGvwxijH8ZhP/9AbNhWJwRgn9+/AxWl5TYy/D61hOgvi8QF3z/8Akswc/JjGLjfwZGMM0IZIHY3z5ADDi4ogQs+23+XgZGUCBaRE4EByUjRBeUATOEASoANe4/0DhGqOh/aBjIm+kzfn37/n+IkxZJAbhm3zWIAX9//WHg4OVlMDBQZhD6+5doA7aceQQx4M/PnwywePRN6IVEDzsrAysnJwMHDxcDGxCDaFZODoZJqfZwA/78+AWLxh9wf+9cWkK0C359/wEx4DeQAXOBe3QPXhfAwKwsJ3D6gSckmAGHV5cT7YLf36AuADkFBmxDO4lyweJCZ7DLIbEADIz/0DA4vaGSeBcA9YETkpF/JyLNMGBJTXgAI6XZGSDAAJsyjhMJL+H/AAAAAElFTkSuQmCC",
+            "children": [
+                {
+                    "type": "html.option",
+                    "properties": {
+                        "value": "Item 1"
+                    },
+                    "children": "Item 1"
+                },
+                {
+                    "type": "html.option",
+                    "properties": {
+                        "value": "Item 2"
+                    },
+                    "children": "Item 2"
+                },
+                {
+                    "type": "html.option",
+                    "properties": {
+                        "value": "Item 3"
+                    },
+                    "children": "Item 3"
+                }
+            ],
+            "resizable": "width",
+            "helper": "./samsarasoftware/form/SelectHelper",
+            "inlineEdit": "./samsarasoftware/form/SelectInput",
+            "iconLarge": "resources/imagesLarge/FilteringSelect.png",
+            "iconLargeBase64": "data:image/png;base64,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"
+        },
+        {
+            "name": "TimeStampTextBox",
+            "description": "Time Stamp Text Box",
+            "type": "samsarasoftware/form/TimeStampTextBox",
+            "category": "controls",
+            "collection": "dijit",
+            "tags": "TimeStampTextBox",
+            "inlineEdit": {
+            	"property": [
+					{
+						"property":"value", 
+						"multiLine": false,
+						"supportsHTML": false
+					},
+            		{
+            			"property":"placeHolder", 
+            			"multiLine": false, 
+            			"supportsHTML": false            			
+        			}
+				],
+                "displayOnCreate": false,
+ 
+            },
+            "icon": "resources/images/date-text-box.gif",
+            "iconBase64": "data:image/gif;base64,R0lGODlhEAAQANUAADdXkDZYkTZYkDdYkDlck2eAq3WNtHuRtrG/1vP2+zxhmD1imFN1pneRt6i50rHA1tbe6vL2/D9mnUBonkFpn0JqoEFonlJ1pnqWu5CoyKK20Ke50rLC2OLr90ZzqERvpEVvpWyOuHyawIahw9fg6+Tt+Obu+Eh2q0h3q0t7r0l2qk19sYCgxOXu+Iapzdfi7VCFt1CEtrnO4laOv8/t++j4+PD4+P+oAP///////wAAAAAAAAAAAAAAAAAAAAAAACH5BAEAADkALAAAAAAQABAAAAaVwJxwSCwKZ8ikMjmM0Z7QKA02PNFKrU5pa+qaVEMJLUFORCLms2Q4EAwAg7ggIKgPKqsh5XBg8P0HFwcFKUMwODgyiIo4LohUQh4hGQ4OGw4ZISMhIRVDKIgvNzcviCyIKEMfNjYkoySsIqwgQxYYHBC5EBwYGhgYE0MLNTUIxA/EDcQKQwTEBs/RNQRscdbX1kbaQ0EAOw==",
+            "resizable": "width",
+            "iconLarge": "resources/imagesLarge/DateTextBox.png",
+            "iconLargeBase64": "data:image/png;base64,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"
+        }
+   ]
+}

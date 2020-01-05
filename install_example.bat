@@ -1,0 +1,3 @@
+C:\lengo-framework\devel-framework\eclipse-mars-modelling-x64>eclipsec.exe -nosplash -application org.eclipse.equinox.p2.director  -destination c:\lengo-framework\devel-framework\maqetta -repository jar:file:/C:/lengo-framework/devel-framework/maqetta/net.samsarasoftware.update-site-0.0.2-SNAPSHOT.zip!/ -installIU net.samsarasoftware.maqetta.feature.feature.group -tag addSamsarasoftware -profile profile
+Installing net.samsarasoftware.maqetta.feature.feature.group 0.0.2.201705171437.
+Operation completed in 1986 ms.
