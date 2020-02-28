@@ -2,7 +2,7 @@
 <feature
       id="net.samsarasoftware.maqetta.feature"
       label="Samsarasoftware Libraries for maqetta.org"
-      version="${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}.qualifier">
+      version="${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}">
 
    <description url="http://www.example.com/description">
       Samsarasoftware Libraries for maqetta.org
