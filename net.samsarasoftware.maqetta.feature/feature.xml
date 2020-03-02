@@ -2,7 +2,7 @@
 <feature
       id="net.samsarasoftware.maqetta.feature"
       label="Samsarasoftware Libraries for maqetta.org"
-      version="0.2.0.qualifier">
+      version="0.2.0">
 
    <description url="http://www.example.com/description">
       Samsarasoftware Libraries for maqetta.org

@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: net.samsarasoftware.maqetta.plugin
 Bundle-SymbolicName: net.samsarasoftware.maqetta.plugin;singleton:=true
-Bundle-Version: 0.2.0.qualifier
+Bundle-Version: 0.2.0
 Export-Package: net.samsarasoftware.maqetta.plugin
 Require-Bundle: org.eclipse.equinox.http.registry,
  org.eclipse.osgi,
