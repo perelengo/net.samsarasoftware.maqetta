@@ -60,7 +60,7 @@
 	</build>
 
 	<scm>
-		<developerConnection>scm:git:https://github.com/perelengo/net.samsarasoftware.maqetta.git</developerConnection>
+		<developerConnection>scm:git:git@github.com:perelengo/net.samsarasoftware.maqetta.git</developerConnection>
 	</scm>
 	<distributionManagement>
 		<repository>
